@@ -1,38 +1,224 @@
-.App {
-  text-align: center;
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("./Pics/Background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 90vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+  height: 80vh;
+  text-align: center;
+}
+
+.section__pic-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.section__text {
+  margin-bottom: 3rem;
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.section__text p {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
+.email_text {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  gap: 0.7rem;
+}
+
+.email_text a {
+  color: aliceblue;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn {
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 22rem;
+  border-radius: 2rem;
+  color: white;
+}
+
+.btn-color-1 {
+  background-color: pink;
+  border: 2px solid white;
+  animation: btnWiggle 1.8s infinite;
+}
+
+@keyframes btnWiggle {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  10% {
+    transform: rotate(-5deg); /* Smaller angle for faster wiggles */
+  }
+  20% {
+    transform: rotate(5deg); /* Reverse the previous rotation */
+  }
+  30% {
+    transform: rotate(-3deg); /* Smaller angle */
+  }
+  40% {
+    transform: rotate(3deg); /* Reverse the previous rotation */
+  }
+  50% {
+    transform: rotate(-2deg); /* Smaller angle */
+  }
+  60% {
+    transform: rotate(2deg); /* Reverse the previous rotation */
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.btn-color-1,
+.btn-color-2,
+.btn-color-3,
+.btn-color-4,
+.btn-color-5,
+.btn-color-6 {
+  background-color: pink;
+  border: 2px solid white;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover,
+.btn-color-3:hover,
+.btn-color-4:hover,
+.btn-color-5:hover,
+.btn-color-6:hover {
+  background-color: pink;
+  color: white;
+  cursor: pointer;
+}
+
+.icon {
+  height: 1.1rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+  color: aliceblue;
+  margin-top: 5rem;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}
+
+
+@media screen and (max-width: 1920px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+    margin-top: 30rem;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+    margin-top: 30rem;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+    margin-top: 36rem;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
   }
 }
