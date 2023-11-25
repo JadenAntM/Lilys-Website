@@ -1,10 +1,12 @@
-# Getting Started with Create React App
+# Lilyvarie.com
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Created a React website for a social media influencer that has over 300K followers on TikTok and Instagram. The client wanted a simple responsive website that displayed all of her links to various social media. I also added an embedded TikTok within the website.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User-friendly design
+- Buttons for all the client's desired links
+- An embedded TikTok that plays when the page has been loaded
 
 ### `npm start`
 
