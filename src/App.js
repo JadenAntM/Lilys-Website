@@ -1,11 +1,15 @@
 import React from 'react';
-import './App.css';
-import Profile from './Profile'; // Import the new component
+import './App.css'; // Ensure your CSS is correctly linked here
+import Profile from './Profile';
 
 function App() {
   return (
     <div className="App">
-      <Profile /> {/* Use the Profile component here */}
+      <ul className="lightrope">
+        {/* Insert 50 <li></li> elements here */}
+        {[...Array(50)].map((_, i) => <li key={i}></li>)}
+      </ul>
+      <Profile /> {/* Profile component */}
     </div>
   );
 }
